@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>AdminLTE 3 | 数据表格</title>
+    <!-- 告诉浏览器屏幕自适应 -->
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="../static/plugins/fontawesome-free/css/all.min.css">
+    <!-- Ionicons -->
+    <link rel="stylesheet" href="https://cdn.bootcss.com/ionicons/2.0.1/css/ionicons.min.css">
+    <!-- DataTables -->
+    <link rel="stylesheet" href="../static/plugins/datatables-bs4/css/dataTables.bootstrap4.min.css">
+    <link rel="stylesheet" href="../static/plugins/datatables-responsive/css/responsive.bootstrap4.min.css">
+    <!-- 主题样式 -->
+    <link rel="stylesheet" href="../static/dist/css/adminlte.min.css">
+    <!-- 离线 Google 字体: Source Sans Pro -->
+    <!--<link href="../static/AdminLTE/AdminLTE-3.x/dist/css/google.css?family=Source+Sans+Pro:300,400,400i,700" rel="stylesheet">-->
+</head>
+
+<body class="hold-transition skin-purple sidebar-mini">
+<div class="wrapper">
+
+    <!--------------------------------------------- 头部 ------------------------------------------>
+    <!--引入抽取的AdminLTEdemo-->
+    <!--模板名：会使用thymeleaf的前后缀配置规则进行解析-->
+    <div th:replace="commons/AdminLTEdemo::main_header"></div>
+
+    <!-------------------------------------------- 左部侧边栏 ---------------------------------------------->
+    <div th:replace="commons/AdminLTEdemo::#main_sidebar(activeUri='main')"></div>
+
+    <!------------------------------------- 页面主体内容 -------------------------------------->
+    <div class="content-wrapper">
+        <!------- 头部 (页眉) ------->
+        <section class="content-header">
+            <h1>
+                首页
+                <small>欢迎您</small>
+            </h1>
+            <!-- 面包屑 -->
+            <ol class="breadcrumb">
+                <li><a href="#"><i class="fa fa-dashboard"></i> home</a></li>
+                <li class="active">样例</li>
+            </ol>
+        </section>
+
+        <!------ 主体内容 ------>
+        <section class="content container-fluid">
+            <!-- 面板样例 -->
+            <div class="box box-primary">
+                <!-- 面板头部 -->
+                <div class="box-header with-border">
+                    <i class="fa fa-cube"></i>
+                    <h3 class="box-title">面板样例</h3>
+                </div>
+                <!-- 面板内容 -->
+                <div class="box-body">
+                    <h1>我是首页！</h1>
+                    <h3>任何你想要的</h3>
+
+                </div>
+
+
+            </div>
+            <!-- /.box-body -->
+
+        </section>
+    </div>
+
+    <!------- 尾部Footer ------>
+    <div th:replace="commons/AdminLTEdemo::main_footer"></div>
+
+    <!------------------------------------右侧设置按钮的侧边栏 ------------------------------------>
+    <div th:replace="commons/AdminLTEdemo::control_sidebar"></div>
+    <!-- /.control-sidebar -->
+    <!-- 添加侧边栏的背景。这个 div必须放在 control-sidebar 之后 -->
+    <div class="control-sidebar-bg"></div>
+</div>
+
+
+<!--------------------------- 导入的 JS SCRIPTS ------------------------>
+
+<!-- jQuery -->
+<script src="../static/plugins/jquery/jquery.min.js"></script>
+<!-- Bootstrap 4 -->
+<script src="../static/plugins/bootstrap/js/bootstrap.bundle.min.js"></script>
+<!-- DataTables -->
+<script src="../static/plugins/datatables/jquery.dataTables.min.js"></script>
+<script src="../static/plugins/datatables-bs4/js/dataTables.bootstrap4.min.js"></script>
+<script src="../static/plugins/datatables-responsive/js/dataTables.responsive.min.js"></script>
+<script src="../static/plugins/datatables-responsive/js/responsive.bootstrap4.min.js"></script>
+<!-- AdminLTE App -->
+<script src="../static/dist/js/adminlte.min.js"></script>
+<!-- 用于演示 AdminLTE  -->
+<script src="../static/dist/js/demo.js"></script>
+
+</body>
+
+</html>
