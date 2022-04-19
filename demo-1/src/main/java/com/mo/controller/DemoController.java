@@ -26,13 +26,6 @@ public class DemoController {
     @Resource
     private UserService userService;
 
-   // @ResponseBody
-    @GetMapping("/demo1")
-    public String demo1(HttpServletResponse httpServletRequest){
-
-        return "index";
-
-    }
     @GetMapping("/getGoodsList")
     @ResponseBody
     public String getGoodsList(){
