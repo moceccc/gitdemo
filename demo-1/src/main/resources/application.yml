@@ -21,3 +21,6 @@ spring:
     url: jdbc:mysql://127.0.0.1:3306/user?useUnicode=true&characterEncoding=utf8
     driver-class-name: com.mysql.jdbc.Driver
 
+mybatis-plus:
+  configuration:
+    log-impl: org.apache.ibatis.logging.stdout.StdOutImpl
